@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shortly allows you to shorten any valid link. It also helps to build your brand's recognition and get detailed insights on how your links are performing."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script>
+      history.scrollRestoration = 'manual';
+    </script>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header-container">
+        <a href="#">
+          <img
+            class="logo logo--header"
+            src="images/logo.svg"
+            alt="Shortly logo"
+          />
+        </a>
+
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        </button>
+
+        <nav class="main-nav">
+          <ul class="main-nav-links">
+            <li><a class="main-nav-link" href="#">Features</a></li>
+            <li><a class="main-nav-link" href="#">Pricing</a></li>
+            <li><a class="main-nav-link" href="#">Resources</a></li>
+          </ul>
+          <ul class="main-nav-account">
+            <li><a class="main-nav-link" href="#">Login</a></li>
+            <li><a class="btn btn--sign-up" href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero-grid container">
+          <div class="hero-text-box">
+            <h1 class="hero-heading">More than just shorter links</h1>
+            <p class="hero-description">
+              Build your brand’s recognition and get detailed insights on how
+              your links are performing.
+            </p>
+            <a class="btn btn--get-started" href="#">Get Started</a>
+          </div>
+          <div class="hero-img-box">
+            <img
+              class="hero-img"
+              src="images/illustration-working.svg"
+              alt="Cartoon character of a person sitting at the desk and using a computer"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shorten">
+        <div class="container">
+          <form class="shorten-input-box">
+            <div>
+              <input
+                class="input"
+                type="text"
+                placeholder="Shorten a link here..."
+              />
+              <p class="error-message hidden"></p>
+            </div>
+            <button class="btn btn-shorten-it">Shorten It!</button>
+          </form>
+          <div class="shorten-links-box"></div>
+        </div>
+      </section>
+
+      <section class="section-statistics">
+        <div class="container">
+          <h2 class="heading-secondary">Advanced Statistics</h2>
+          <p class="statistics-description">
+            Track how your links are performing across the web with our advanced
+            statistics dashboard
+          </p>
+        </div>
+        <div class="container">
+          <div class="statistics-grid">
+            <div class="statistics-card">
+              <div class="statistics-icon">
+                <img
+                  class="icon-inner"
+                  src="images/icon-brand-recognition.svg"
+                  alt="Icon of a bar graph showing growth"
+                />
+              </div>
+              <p class="statistics-title">Brand Recognition</p>
+              <p class="statistics-text">
+                Boost your brand recognition with each click. Generic links
+                don’t mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
+            <div class="statistics-card statistics-card--2">
+              <div class="statistics-icon">
+                <img
+                  class="icon-inner"
+                  src="images/icon-detailed-records.svg"
+                  alt="Icon of a clock"
+                />
+              </div>
+              <p class="statistics-title">Detailed Records</p>
+              <p class="statistics-text">
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </div>
+            <div class="statistics-card statistics-card--3">
+              <div class="statistics-icon">
+                <img
+                  class="icon-inner icon-inner--customizable"
+                  src="images/icon-fully-customizable.svg"
+                  alt="Icon of three different painting tools"
+                />
+              </div>
+              <p class="statistics-title">Fully Customizable</p>
+              <p class="statistics-text">
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta">
+        <div class="container">
+          <h2 class="heading-secondary">Boost your links today</h2>
+          <a class="btn btn--get-started" href="#">Get Started</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="logo-col">
+          <a href="#">
+            <img
+              class="logo logo--footer"
+              src="images/logo.svg"
+              alt="Shortly logo"
+            />
+          </a>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Features</p>
+          <ul class="footer-list">
+            <li><a class="footer-link" href="#">Link Shortening</a></li>
+            <li><a class="footer-link" href="#">Branded Links</a></li>
+            <li><a class="footer-link" href="#">Analytics</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-list">
+            <li><a class="footer-link" href="#">Blog</a></li>
+            <li><a class="footer-link" href="#">Developers</a></li>
+            <li><a class="footer-link" href="#">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-list">
+            <li><a class="footer-link" href="#">About</a></li>
+            <li><a class="footer-link" href="#">Our Team</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+            <li><a class="footer-link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-col">
+          <ul class="social-links">
+            <li>
+              <a class="social-link" href="#">
+                <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#">
+                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#">
+                <ion-icon class="social-icon" name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#">
+                <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/monikagawryluk" target="_blank"
+        >Monika Gawryluk</a
+      >.
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
