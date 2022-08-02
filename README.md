@@ -14,4 +14,4 @@ Users should be able to:
 
 ## Links
 
-- Live demo: https://mapty-monika-gawryluk.netlify.app
+- Live demo: https://shortly-monika-gawryluk.netlify.app
