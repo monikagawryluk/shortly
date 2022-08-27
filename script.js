@@ -1,5 +1,7 @@
 'use strict';
 
+//// Variables
+
 const formShorten = document.querySelector('.shorten-input-box');
 const inputShorten = document.querySelector('.input');
 const linksContainer = document.querySelector('.shorten-links-box');
@@ -12,6 +14,8 @@ const state = {
   links: [],
   linkCopied: '',
 };
+
+//// Functions
 
 const removeClass = function (element, className) {
   element.classList.remove(className);
@@ -95,6 +99,26 @@ const renderShortenedLinks = function () {
   });
 };
 
+const init = function () {
+  // Get links from local storage
+  const storage = localStorage.getItem('links');
+  if (!storage) return;
+
+  // Put links in state
+  state.links = JSON.parse(storage);
+
+  // Render links
+  renderShortenedLinks();
+};
+init();
+
+const hideMobileNavigation = function () {
+  removeClass(mainNavigation, 'nav-open');
+  removeClass(imgHeroSection, 'hero-img--blurred');
+};
+
+//// Event Listeners
+
 // Submit form in shorten section -> Render shortened link
 formShorten.addEventListener('submit', async function (e) {
   try {
@@ -115,19 +139,6 @@ formShorten.addEventListener('submit', async function (e) {
     console.error(err);
   }
 });
-
-const init = function () {
-  // Get links from local storage
-  const storage = localStorage.getItem('links');
-  if (!storage) return;
-
-  // Put links in state
-  state.links = JSON.parse(storage);
-
-  // Render links
-  renderShortenedLinks();
-};
-init();
 
 // Click button "Copy" -> Copy shortened link to clipboard
 linksContainer.addEventListener('click', async function (e) {
@@ -172,11 +183,6 @@ btnMobileNavigation.addEventListener('click', function () {
   imgHeroSection.classList.toggle('hero-img--blurred');
 });
 
-const hideMobileNavigation = function () {
-  removeClass(mainNavigation, 'nav-open');
-  removeClass(imgHeroSection, 'hero-img--blurred');
-};
-
 // Click outside of mobile navigation -> Hide mobile navigation
 document.addEventListener('mousedown', function (e) {
   if (
@@ -217,7 +223,8 @@ document.body.addEventListener('click', function (e) {
     hideMobileNavigation();
 });
 
-// Fixing flexbox gap property missing in some Safari versions
+//// Fixing flexbox gap property missing in some Safari versions
+
 function checkFlexGap() {
   var flex = document.createElement('div');
   flex.style.display = 'flex';
